@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2022 at 11:52 AM
+-- Generation Time: Jan 29, 2023 at 10:32 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -94,8 +94,10 @@ CREATE TABLE `personal_access_tokens` (
 --
 
 INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `name`, `token`, `abilities`, `last_used_at`, `created_at`, `updated_at`) VALUES
-(1, 'App\\Models\\User', 1, 'auth_token', 'f5c3537351ff85a38fdf8e7c4a2e584bc5e4b02743ea5a57dade157975dc5b53', '[\"*\"]', NULL, '2022-11-29 14:22:29', '2022-11-29 14:22:29'),
-(2, 'App\\Models\\User', 1, 'auth_token', 'd456cf984ad76a37967de76b64f21b316c587788aec17d08e0205f5f0d716e39', '[\"*\"]', NULL, '2022-11-29 14:24:11', '2022-11-29 14:24:11');
+(4, 'App\\Models\\User', 1, 'auth_token', '03e8152b048f8086b860eedee558a6780a1770da6e8bbc877fd157e7ac9e4637', '[\"*\"]', '2022-11-30 13:45:49', '2022-11-30 13:45:24', '2022-11-30 13:45:49'),
+(5, 'App\\Models\\User', 2, 'auth_token', '67f0aaa608ec889a906a741b6c482501394f5a474d07a77ce80f5e60adf020b6', '[\"*\"]', '2022-11-30 14:21:18', '2022-11-30 14:15:54', '2022-11-30 14:21:18'),
+(6, 'App\\Models\\User', 3, 'auth_token', 'cd60e33b3cbf6d7f22629e45b54a8b4eb2087bf329a9204f7b69499555ca4d8e', '[\"*\"]', NULL, '2022-11-30 14:37:50', '2022-11-30 14:37:50'),
+(7, 'App\\Models\\User', 4, 'auth_token', '7d3f78e11f872e5fd53d5dc55c59d119861fa514384e477c12e379d4c7414fe1', '[\"*\"]', '2022-11-30 15:19:36', '2022-11-30 15:16:51', '2022-11-30 15:19:36');
 
 -- --------------------------------------------------------
 
@@ -119,7 +121,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Darpan', 'darpankhatri817@gmial.com', NULL, '$2y$10$YHS4wucwArjVV9xMN3VB3uqvO9W6ilcijlFexJz2jGBmXgglalOnC', NULL, '2022-11-29 14:22:29', '2022-11-29 14:22:29');
+(1, 'Darpan', 'darpankhatri817@gmial.com', NULL, '$2y$10$YHS4wucwArjVV9xMN3VB3uqvO9W6ilcijlFexJz2jGBmXgglalOnC', NULL, '2022-11-29 14:22:29', '2022-11-29 14:22:29'),
+(2, 'test', 'test@gmail.com', NULL, '$2y$10$BK/RzVYoQ9jcZCEwxUzavevq/.4vMEPNVEpLazkzKyie3u4wxEQS6', NULL, '2022-11-30 14:15:54', '2022-11-30 14:15:54'),
+(3, 'test', 'test2@gmail.com', NULL, '$2y$10$YBWJc.PDY/rl2s7JK4QvEOBf80IbdrmRMB0MZso69yBuvX3guhNwe', NULL, '2022-11-30 14:37:50', '2022-11-30 14:37:50'),
+(4, 'test', 'test7@gmail.com', NULL, '$2y$10$zz9ceq15kxBswnyMt3Akruv.mg3hqRPfjPeokaqKaMMsf0BZBEtBG', NULL, '2022-11-30 15:16:51', '2022-11-30 15:16:51');
 
 --
 -- Indexes for dumped tables
@@ -179,13 +184,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
